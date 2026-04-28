@@ -1,0 +1,68 @@
+```html id="vfix21"
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      background: pink;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 80px;
+      color: #d63384;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background: green;
+      color: white;
+    }
+
+    #noBtn {
+      background: red;
+      color: white;
+      position: absolute;
+      top: 60%;
+      left: 55%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Will you be my Valentine? 💕</h1>
+
+  <button id="yesBtn" onclick="yesClicked()">YES ❤️</button>
+  <button id="noBtn">NO 😢</button>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function () {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function yesClicked() {
+      alert("I knew it 😍❤️");
+    }
+  </script>
+
+</body>
+</html>
+```
